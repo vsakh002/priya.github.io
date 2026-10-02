@@ -8,10 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <link rel="stylesheet" href="assets/css/main.css" />
-
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <style>
 
@@ -122,16 +125,64 @@
 
 
         /* =========================
-           SOCIAL LINKS
+           SOCIAL ICONS
         ========================= */
 
         .social-links {
-            margin-top: 1.5em;
+            margin-top: 25px;
         }
 
         .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 50px;
+            height: 50px;
+
+            margin-right: 12px;
+
+            border-radius: 50%;
+
+            background: #eeeeee;
+            color: #333333;
+
+            font-size: 22px;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+        }
+
+        .social-links a:hover {
+            background: #6169f7;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           HOME SOCIAL ICONS
+        ========================= */
+
+        .home-social {
+            margin-top: 20px;
+        }
+
+        .home-social a {
             margin-right: 15px;
-            font-size: 1.3em;
+
+            font-size: 25px;
+
+            color: #333333;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+        }
+
+        .home-social a:hover {
+            color: #6169f7;
         }
 
 
@@ -141,7 +192,7 @@
 
         .cv-button {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
     </style>
@@ -179,6 +230,10 @@
 
         <a href="#experience" class="icon solid fa-briefcase">
             <span>Experience</span>
+        </a>
+
+        <a href="#skills" class="icon solid fa-code">
+            <span>Skills</span>
         </a>
 
         <a href="#projects" class="icon solid fa-folder">
@@ -226,6 +281,41 @@
                     data engineering, and machine learning.
                 </p>
 
+
+                <!-- HOME SOCIAL ICONS -->
+
+                <div class="home-social">
+
+                    <a
+                        href="mailto:vamsipriyasakhamuri0@gmail.com"
+                        title="Email">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/vamsi-priya-sakhamuri/"
+                        target="_blank"
+                        title="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin"></i>
+
+                    </a>
+
+
+                    <a
+                        href="https://github.com/vsakh002"
+                        target="_blank"
+                        title="GitHub">
+
+                        <i class="fa-brands fa-github"></i>
+
+                    </a>
+
+                </div>
+
             </header>
 
 
@@ -233,8 +323,7 @@
 
                 <img
                     src="images/Priya.jpeg"
-                    alt="Vamsi Priya Sakhamuri"
-                />
+                    alt="Vamsi Priya Sakhamuri" />
 
             </a>
 
@@ -294,9 +383,13 @@
                 </div>
 
                 <div class="info-value">
+
                     <a href="mailto:vamsipriyasakhamuri0@gmail.com">
+
                         vamsipriyasakhamuri0@gmail.com
+
                     </a>
+
                 </div>
 
             </div>
@@ -324,31 +417,6 @@
                 <div class="info-value">
                     English, Telugu, Hindi
                 </div>
-
-            </div>
-
-
-            <div class="social-links">
-
-                <a
-                    href="https://www.linkedin.com/in/vamsi-priya-sakhamuri/"
-                    target="_blank"
-                    title="LinkedIn"
-                    class="icon brands fa-linkedin">
-                </a>
-
-                <a
-                    href="https://github.com/vsakh002"
-                    target="_blank"
-                    title="GitHub"
-                    class="icon brands fa-github">
-                </a>
-
-                <a
-                    href="mailto:vamsipriyasakhamuri0@gmail.com"
-                    title="Email"
-                    class="icon solid fa-envelope">
-                </a>
 
             </div>
 
@@ -430,8 +498,7 @@
             <div class="experience">
 
                 <h3>
-                    Systems Analyst
-                    @ Old Dominion University
+                    Systems Analyst @ Old Dominion University
                     <span class="date">
                         | May 2025 – Present
                     </span>
@@ -464,8 +531,7 @@
             <div class="experience">
 
                 <h3>
-                    Database Administrator
-                    @ Old Dominion University
+                    Database Administrator @ Old Dominion University
                     <span class="date">
                         | Oct 2023 – May 2025
                     </span>
@@ -498,8 +564,7 @@
             <div class="experience">
 
                 <h3>
-                    Data Insights Analyst
-                    @ Andhra Jyothi
+                    Data Insights Analyst @ Andhra Jyothi
                     <span class="date">
                         | May 2022 – Aug 2023
                     </span>
@@ -528,13 +593,12 @@
 
 
 
-            <!-- QA TESTER -->
+            <!-- QUALITY ASSURANCE TESTER -->
 
             <div class="experience">
 
                 <h3>
-                    Quality Assurance Tester
-                    @ MIC College of Technology
+                    Quality Assurance Tester @ MIC College of Technology
                     <span class="date">
                         | Dec 2021 – May 2022
                     </span>
@@ -703,7 +767,7 @@
 
 
         <!-- =========================
-             RESEARCH
+             RESEARCH INTERESTS
         ========================= -->
 
         <article id="research" class="panel">
@@ -765,49 +829,66 @@
             </p>
 
 
-            <p>
+            <!-- CONTACT ICONS -->
 
-                <b>Email:</b>
+            <div class="social-links">
 
-                <a href="mailto:vamsipriyasakhamuri0@gmail.com">
-                    vamsipriyasakhamuri0@gmail.com
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:vamsipriyasakhamuri0@gmail.com"
+                    title="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
                 </a>
 
-            </p>
 
-
-            <p>
-
-                <b>LinkedIn:</b>
+                <!-- LINKEDIN -->
 
                 <a
                     href="https://www.linkedin.com/in/vamsi-priya-sakhamuri/"
-                    target="_blank">
-                    linkedin.com/in/vamsi-priya-sakhamuri
+                    target="_blank"
+                    title="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
                 </a>
 
-            </p>
 
-
-            <p>
-
-                <b>GitHub:</b>
+                <!-- GITHUB -->
 
                 <a
                     href="https://github.com/vsakh002"
-                    target="_blank">
-                    github.com/vsakh002
+                    target="_blank"
+                    title="GitHub">
+
+                    <i class="fa-brands fa-github"></i>
+
                 </a>
+
+
+            </div>
+
+
+            <p style="margin-top: 20px;">
+
+                <b>Email:</b>
+                vamsipriyasakhamuri0@gmail.com
 
             </p>
 
+
+            <!-- DOWNLOAD CV -->
 
             <a
                 href="https://drive.google.com/file/d/1Fi4_QNmoUzneiSFo1o_iN7RacBrIHjUh/view?usp=drive_link"
                 class="button cv-button"
                 target="_blank">
 
-                Download CV
+                <i class="fa-solid fa-file-pdf"></i>
+                &nbsp; Download CV
 
             </a>
 
@@ -853,6 +934,6 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 
-
 </body>
+
 </html>
