@@ -1,447 +1,941 @@
-<!DOCTYPE html>
+New with old
+
+<!DOCTYPE HTML>
 <html>
+
 <head>
     <title>Vamsi Priya Sakhamuri</title>
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <style>
 
-        * {
-            box-sizing: border-box;
-        }
+        /* =========================
+           GENERAL
+        ========================= */
 
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
             font-size: 15px;
-            line-height: 1.4;
-            color: #333;
         }
 
-        .container {
-            width: 1100px;
-            max-width: 95%;
-            margin: 0 auto;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .left {
-            width: 340px;
-            min-width: 340px;
-            height: 100vh;
-            text-align: center;
-            padding: 45px 20px;
-            position: sticky;
-            top: 0;
-        }
-
-        .left img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .left h1 {
-            margin: 12px 0 0;
-            font-size: 22px;
-            white-space: nowrap;
-        }
-
-        .left p {
-            margin: 0;
-        }
-
-        .icons {
-            margin-top: 15px;
-        }
-
-        .icons a {
-            font-size: 25px;
-            margin: 0 7px;
-            color: #333;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .icons a:hover {
-            opacity: 0.6;
-            transform: translateY(-2px);
-        }
-
-        .right {
-            width: 760px;
-            padding: 30px 50px;
+        h1 {
+            font-size: 2.2em;
         }
 
         h2 {
-            font-size: 21px;
-            margin: 24px 0 3px;
+            font-size: 1.5em;
         }
 
         h3 {
-            font-size: 16px;
-            margin: 10px 0 0;
+            font-size: 1.05em;
+            margin-bottom: 0.4em;
         }
 
-        p {
-            margin: 2px 0 6px;
+        .panel p,
+        .panel li {
+            font-size: 0.95em;
+            line-height: 1.5;
         }
 
-        ul {
-            margin: 2px 0 8px;
-            padding-left: 22px;
+        .panel ul {
+            margin-top: 0.3em;
+            margin-bottom: 1em;
         }
 
-        li {
-            margin: 0;
-            padding: 0;
+        .panel li {
+            margin-bottom: 0.25em;
         }
 
-        a {
-            color: #333;
+
+        /* =========================
+           HOME
+        ========================= */
+
+        .intro header {
+            max-width: 60%;
         }
 
-        @media screen and (max-width: 850px) {
+        .intro header p {
+            font-size: 1em;
+        }
 
-            .container {
-                width: 100%;
-                max-width: 100%;
-                display: block;
-            }
+        .intro .pic img {
+            object-fit: cover;
+        }
 
-            .left {
-                width: 100%;
-                min-width: 0;
-                height: auto;
-                position: relative;
-            }
 
-            .left h1 {
-                white-space: normal;
-            }
+        /* =========================
+           INFORMATION ROWS
+        ========================= */
 
-            .right {
-                width: 100%;
-                padding: 20px 30px;
-            }
+        .info-row {
+            display: flex;
+            padding: 6px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .info-label {
+            width: 170px;
+            font-weight: bold;
+        }
+
+        .info-value {
+            flex: 1;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience {
+            margin-bottom: 1.5em;
+        }
+
+        .experience h3 {
+            margin-bottom: 0.1em;
+        }
+
+        .date {
+            font-size: 0.9em;
+            color: #777;
+            font-weight: normal;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .project {
+            margin-bottom: 1.3em;
+        }
+
+        .project h3 {
+            margin-bottom: 0.2em;
+        }
+
+
+        /* =========================
+           SOCIAL ICONS
+        ========================= */
+
+        .social-links {
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 50px;
+            height: 50px;
+
+            margin-right: 12px;
+
+            border-radius: 50%;
+
+            background: #eeeeee;
+            color: #333333;
+
+            font-size: 22px;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+        }
+
+        .social-links a:hover {
+            background: #6169f7;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           HOME SOCIAL ICONS
+        ========================= */
+
+        .home-social {
+            margin-top: 20px;
+        }
+
+        .home-social a {
+            margin-right: 15px;
+
+            font-size: 25px;
+
+            color: #333333;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+        }
+
+        .home-social a:hover {
+            color: #6169f7;
+        }
+
+
+        /* =========================
+           CV BUTTON
+        ========================= */
+
+        .cv-button {
+            display: inline-block;
+            margin-top: 20px;
         }
 
     </style>
+
 </head>
 
-<body>
 
-<div class="container">
+<body class="is-preload">
 
-    <!-- LEFT SIDE -->
 
-    <div class="left">
+<!-- =========================
+     WRAPPER
+========================= -->
 
-        <img src="images/Priya.jpeg"
-             alt="Vamsi Priya Sakhamuri">
+<div id="wrapper">
 
-        <h1>Vamsi Priya Sakhamuri</h1>
 
-        <p>Data Analyst / Data Engineer</p>
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
-        <div class="icons">
+    <nav id="nav">
 
-            <!-- Email -->
-            <a href="mailto:vamsipriyasakhamuri0@gmail.com"
-               title="Email">
+        <a href="#home" class="icon solid fa-home">
+            <span>Home</span>
+        </a>
 
-                <i class="fa-solid fa-envelope"></i>
+        <a href="#about" class="icon fa-address-card">
+            <span>About</span>
+        </a>
+
+        <a href="#education" class="icon solid fa-university">
+            <span>Education</span>
+        </a>
+
+        <a href="#experience" class="icon solid fa-briefcase">
+            <span>Experience</span>
+        </a>
+
+        <a href="#skills" class="icon solid fa-code">
+            <span>Skills</span>
+        </a>
+
+        <a href="#projects" class="icon solid fa-folder">
+            <span>Projects</span>
+        </a>
+
+        <a href="#research" class="icon solid fa-flask">
+            <span>Research</span>
+        </a>
+
+        <a href="#contact" class="icon solid fa-envelope">
+            <span>Contact</span>
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+    <div id="main">
+
+
+        <!-- =========================
+             HOME
+        ========================= -->
+
+        <article id="home" class="panel intro">
+
+            <header>
+
+                <h1>
+                    Vamsi Priya Sakhamuri
+                </h1>
+
+                <p>
+                    <b>Data Analyst</b> / <b>Data Engineer</b>
+                </p>
+
+                <p>
+                    Computer Science professional with experience in
+                    data analytics, databases, enterprise systems,
+                    data engineering, and machine learning.
+                </p>
+
+
+                <!-- HOME SOCIAL ICONS -->
+
+                <div class="home-social">
+
+                    <a
+                        href="mailto:vamsipriyasakhamuri0@gmail.com"
+                        title="Email">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/vamsi-priya-sakhamuri/"
+                        target="_blank"
+                        title="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin"></i>
+
+                    </a>
+
+
+                    <a
+                        href="https://github.com/vsakh002"
+                        target="_blank"
+                        title="GitHub">
+
+                        <i class="fa-brands fa-github"></i>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+
+            <a class="jumplink pic">
+
+                <img
+                    src="images/Priya.jpeg"
+                    alt="Vamsi Priya Sakhamuri" />
 
             </a>
 
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/vamsi-priya-sakhamuri/"
-               target="_blank"
-               title="LinkedIn">
-
-                <i class="fa-brands fa-linkedin"></i>
-
-            </a>
-
-            <!-- GitHub -->
-            <a href="https://github.com/vsakh002"
-               target="_blank"
-               title="GitHub">
-
-                <i class="fa-brands fa-github"></i>
-
-            </a>
-
-            <!-- Resume -->
-            <a href="images/Vamsi%20Priya%20Sakhamuri%20IT%20Business%20Analyst.pdf"
-               target="_blank"
-               title="Resume / CV">
-
-                <i class="fa-solid fa-file-lines"></i>
-
-            </a>
-
-        </div>
-
-    </div>
+        </article>
 
 
-    <!-- RIGHT SIDE -->
 
-    <div class="right">
+        <!-- =========================
+             ABOUT
+        ========================= -->
 
-        <!-- ABOUT -->
+        <article id="about" class="panel">
 
-        <section>
+            <header>
 
-             <p>
+                <h2>About</h2>
 
-                Hey there, professionals! I’m Vamsi Priya Sakhamuri,
-                a data and technology professional with 4+ years of
-                experience in higher education, working across data
-                analysis, database administration, systems analysis,
-                and data engineering. I enjoy transforming complex
-                data into meaningful insights, building reliable data
-                solutions, and improving processes through technology.
-                My technical interests include SQL, Python, data
-                engineering, analytics, machine learning, artificial
-                intelligence, and cloud technologies. I’m always curious
-                to learn, build, and explore how data and technology can
-                solve real-world problems.
+            </header>
+
+            <p>
+                I am a Computer Science professional with a background
+                in data analytics, database administration, systems
+                analysis, quality assurance, and machine learning.
+            </p>
+
+            <p>
+                My work focuses on transforming data into actionable
+                insights, improving data quality, supporting enterprise
+                systems, and developing data-driven solutions.
+            </p>
+
+
+            <header>
+
+                <h2>Basic Information</h2>
+
+            </header>
+
+
+            <div class="info-row">
+
+                <div class="info-label">
+                    Name
+                </div>
+
+                <div class="info-value">
+                    Vamsi Priya Sakhamuri
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-label">
+                    Email
+                </div>
+
+                <div class="info-value">
+
+                    <a href="mailto:vamsipriyasakhamuri0@gmail.com">
+
+                        vamsipriyasakhamuri0@gmail.com
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-label">
+                    Location
+                </div>
+
+                <div class="info-value">
+                    Virginia, USA
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-label">
+                    Languages
+                </div>
+
+                <div class="info-value">
+                    English, Telugu, Hindi
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             EDUCATION
+        ========================= -->
+
+        <article id="education" class="panel">
+
+            <header>
+
+                <h2>Education</h2>
+
+            </header>
+
+
+            <h3>
+                M.S. in Computer Science
+                <span class="date">
+                    | 2023 – 2025
+                </span>
+            </h3>
+
+            <ul>
+
+                <li>
+                    Old Dominion University
+                </li>
+
+                <li>
+                    GPA: 3.7
+                </li>
+
+            </ul>
+
+
+            <h3>
+                B.S. in Computer Science
+                <span class="date">
+                    | 2019 – 2023
+                </span>
+            </h3>
+
+            <ul>
+
+                <li>
+                    DVR &amp; Dr. HS MIC College of Technology
+                </li>
+
+                <li>
+                    GPA: 3.7
+                </li>
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- =========================
+             WORK EXPERIENCE
+        ========================= -->
+
+        <article id="experience" class="panel">
+
+            <header>
+
+                <h2>Work Experience</h2>
+
+            </header>
+
+
+            <!-- SYSTEMS ANALYST -->
+
+            <div class="experience">
+
+                <h3>
+                    Systems Analyst @ Old Dominion University
+                    <span class="date">
+                        | May 2025 – Present
+                    </span>
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Supported academic systems, instructional data,
+                        and enterprise workflows, improving data accuracy
+                        and reducing manual troubleshooting and
+                        reconciliation efforts by 45%.
+                    </li>
+
+                    <li>
+                        Collaborated with faculty, IT teams, and
+                        stakeholders to resolve system and data issues,
+                        improving the reliability of scheduling,
+                        instructional content, and reporting processes.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- DATABASE ADMINISTRATOR -->
+
+            <div class="experience">
+
+                <h3>
+                    Database Administrator @ Old Dominion University
+                    <span class="date">
+                        | Oct 2023 – May 2025
+                    </span>
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Managed institutional databases, SQL queries,
+                        ETL processes, and data validation workflows,
+                        reducing manual data processing and
+                        reconciliation efforts by 40–50%.
+                    </li>
+
+                    <li>
+                        Improved data quality and reporting reliability
+                        by identifying inconsistencies across
+                        institutional data sources and implementing
+                        validation and reconciliation processes.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- DATA INSIGHTS ANALYST -->
+
+            <div class="experience">
+
+                <h3>
+                    Data Insights Analyst @ Andhra Jyothi
+                    <span class="date">
+                        | May 2022 – Aug 2023
+                    </span>
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Analyzed institutional and operational data
+                        using SQL, Python, Power BI, and Tableau,
+                        improving reporting efficiency and reducing
+                        manual data preparation by 40–50%.
+                    </li>
+
+                    <li>
+                        Developed data-driven insights and dashboards
+                        that improved visibility into trends,
+                        performance, and operational metrics,
+                        supporting faster and more informed
+                        decision-making.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- QUALITY ASSURANCE TESTER -->
+
+            <div class="experience">
+
+                <h3>
+                    Quality Assurance Tester @ MIC College of Technology
+                    <span class="date">
+                        | Dec 2021 – May 2022
+                    </span>
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Performed functional, regression, and data
+                        validation testing across enterprise
+                        applications and workflows, identifying
+                        defects and improving data/system reliability
+                        by 40–50%.
+                    </li>
+
+                    <li>
+                        Documented test cases, defects, and validation
+                        results while collaborating with technical and
+                        business teams to resolve issues and improve
+                        overall application quality.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             TECHNICAL SKILLS
+        ========================= -->
+
+        <article id="skills" class="panel">
+
+            <header>
+
+                <h2>Technical Skills</h2>
+
+            </header>
+
+
+            <ul>
+
+                <li>
+                    <b>Programming:</b>
+                    Python, SQL, T-SQL
+                </li>
+
+                <li>
+                    <b>Databases:</b>
+                    SQL Server, MySQL, SQLite
+                </li>
+
+                <li>
+                    <b>Data &amp; Analytics:</b>
+                    Power BI, Tableau, ETL/ELT, Data Validation
+                </li>
+
+                <li>
+                    <b>Cloud &amp; Big Data:</b>
+                    AWS, Databricks, Spark, PySpark
+                </li>
+
+                <li>
+                    <b>Machine Learning:</b>
+                    Machine Learning, Deep Learning,
+                    Reinforcement Learning
+                </li>
+
+                <li>
+                    <b>Tools:</b>
+                    Git, GitHub, Docker, REST APIs
+                </li>
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- =========================
+             PROJECTS
+        ========================= -->
+
+        <article id="projects" class="panel">
+
+            <header>
+
+                <h2>Projects</h2>
+
+            </header>
+
+
+            <div class="project">
+
+                <h3>
+                    Energy Optimization using Deep Reinforcement Learning
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Applied deep reinforcement learning techniques
+                        to building energy optimization.
+                    </li>
+
+                    <li>
+                        Analyzed energy consumption patterns and
+                        optimization strategies.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    Recommender System
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Developed a recommendation system using
+                        machine learning techniques.
+                    </li>
+
+                    <li>
+                        Worked with data preprocessing, modeling,
+                        and evaluation.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    Student Holds Application
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Developed an academic application integrating
+                        enterprise student data through APIs.
+                    </li>
+
+                    <li>
+                        Worked with React, Ellucian Experience,
+                        AWS Lambda, and Ethos APIs.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             RESEARCH INTERESTS
+        ========================= -->
+
+        <article id="research" class="panel">
+
+            <header>
+
+                <h2>Research Interests</h2>
+
+            </header>
+
+            <ul>
+
+                <li>
+                    Data Science
+                </li>
+
+                <li>
+                    Artificial Intelligence
+                </li>
+
+                <li>
+                    Machine Learning
+                </li>
+
+                <li>
+                    Deep Learning
+                </li>
+
+                <li>
+                    Data Mining
+                </li>
+
+                <li>
+                    AI for Systems
+                </li>
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================= -->
+
+        <article id="contact" class="panel">
+
+            <header>
+
+                <h2>Contact</h2>
+
+            </header>
+
+            <p>
+                I am interested in opportunities involving
+                data science, analytics, data engineering,
+                artificial intelligence, and machine learning.
+            </p>
+
+
+            <!-- CONTACT ICONS -->
+
+            <div class="social-links">
+
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:vamsipriyasakhamuri0@gmail.com"
+                    title="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+
+                <!-- LINKEDIN -->
+
+                <a
+                    href="https://www.linkedin.com/in/vamsi-priya-sakhamuri/"
+                    target="_blank"
+                    title="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+
+                <!-- GITHUB -->
+
+                <a
+                    href="https://github.com/vsakh002"
+                    target="_blank"
+                    title="GitHub">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+            </div>
+
+
+            <p style="margin-top: 20px;">
+
+                <b>Email:</b>
+                vamsipriyasakhamuri0@gmail.com
 
             </p>
 
-        </section>
+
+            <!-- DOWNLOAD CV -->
+
+            <a
+                href="https://drive.google.com/file/d/1Fi4_QNmoUzneiSFo1o_iN7RacBrIHjUh/view?usp=drive_link"
+                class="button cv-button"
+                target="_blank">
+
+                <i class="fa-solid fa-file-pdf"></i>
+                &nbsp; Download CV
+
+            </a>
+
+        </article>
 
 
-        <!-- TECHNICAL SKILLS -->
+    </div>
 
-        <h2>Technical Skills</h2>
 
-        <ul>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <div id="footer">
+
+        <ul class="copyright">
 
             <li>
-                <b>Programming:</b>
-                Python, SQL, T-SQL
+                &copy; Vamsi Priya Sakhamuri
             </li>
 
             <li>
-                <b>Databases:</b>
-                SQL Server, MySQL, SQLite
+                Portfolio
             </li>
-
-            <li>
-                <b>Data & Analytics:</b>
-                Power BI, Tableau, ETL/ELT, Data Validation
-            </li>
-
-            <li>
-                <b>Cloud & Big Data:</b>
-                AWS, Databricks, Spark, PySpark
-            </li>
-
-            <li>
-                <b>Machine Learning:</b>
-                Machine Learning, Deep Learning,
-                Reinforcement Learning
-            </li>
-
-            <li>
-                <b>Tools:</b>
-                Git, GitHub, Docker, REST APIs
-            </li>
-
-        </ul>
-
-
-        <!-- EDUCATION -->
-
-        <h2>Education</h2>
-
-        <ul>
-
-            <li>
-                <b>M.S., Computer Science</b> |
-                Old Dominion University (May 2025)
-            </li>
-
-            <li>
-                <b>B.S., Computer Science</b> |
-                DVR & DR.HS MIC College of Tech (May 2023)
-            </li>
-
-        </ul>
-
-
-        <!-- WORK EXPERIENCE -->
-
-        <h2>Work Experience</h2>
-
-        <h3>
-            Systems Analyst @ Old Dominion University
-            (May 2025 – Present)
-        </h3>
-
-        <ul>
-
-            <li>
-                Supported academic systems, instructional data,
-                and enterprise workflows, improving data accuracy
-                and reducing manual troubleshooting and
-                reconciliation efforts by 45%.
-            </li>
-
-            <li>
-                Collaborated with faculty, IT teams, and
-                stakeholders to resolve system and data issues,
-                improving the reliability of scheduling,
-                instructional content, and reporting processes.
-            </li>
-
-        </ul>
-
-
-        <h3>
-            Database Administrator @ Old Dominion University
-            (Oct 2023 – May 2025)
-        </h3>
-
-        <ul>
-
-            <li>
-                Managed institutional databases, SQL queries,
-                ETL processes, and data validation workflows,
-                reducing manual data processing and
-                reconciliation efforts by 40–50%.
-            </li>
-
-            <li>
-                Improved data quality and reporting reliability
-                by identifying inconsistencies across institutional
-                data sources and implementing validation and
-                reconciliation processes.
-            </li>
-
-        </ul>
-
-
-        <h3>
-            Data Insights Analyst @ Andhra Jyothi
-            (May 2022 – Aug 2023)
-        </h3>
-
-        <ul>
-
-            <li>
-                Analyzed institutional and operational data using
-                SQL, Python, Power BI, and Tableau, improving
-                reporting efficiency and reducing manual data
-                preparation by 40–50%.
-            </li>
-
-            <li>
-                Developed data-driven insights and dashboards
-                that improved visibility into trends, performance,
-                and operational metrics, supporting faster and
-                more informed decision-making.
-            </li>
-
-        </ul>
-
-
-        <h3>
-            Quality Assurance Tester @ MIC College of Tech
-            (Dec 2021 – May 2022)
-        </h3>
-
-        <ul>
-
-            <li>
-                Performed functional, regression, and data
-                validation testing across enterprise applications
-                and workflows, identifying defects and improving
-                data/system reliability by 40–50%.
-            </li>
-
-            <li>
-                Documented test cases, defects, and validation
-                results while collaborating with technical and
-                business teams to resolve issues and improve
-                overall application quality.
-            </li>
-
-        </ul>
-
-
-        <!-- PROJECTS -->
-
-        <h2>Projects</h2>
-
-        <h3>
-            Energy Optimization using Deep Reinforcement Learning
-        </h3>
-
-        <ul>
-
-            <li>
-                Applied deep reinforcement learning techniques
-                to building energy optimization.
-            </li>
-
-            <li>
-                Analyzed energy consumption patterns and
-                optimization strategies.
-            </li>
-
-        </ul>
-
-
-        <h3>
-            Recommender System
-        </h3>
-
-        <ul>
-
-            <li>
-                Developed a recommendation system using
-                machine learning techniques.
-            </li>
-
-            <li>
-                Worked with data preprocessing, modeling,
-                and evaluation.
-            </li>
-
-        </ul>
-
-
-        <!-- RESEARCH -->
-
-        <h2>Research Interests</h2>
-
-        <ul>
-
-            <li>Data Science</li>
-
-            <li>Artificial Intelligence</li>
-
-            <li>Machine Learning</li>
-
-            <li>Deep Learning</li>
-
-            <li>Data Mining</li>
-
-            <li>AI for Systems</li>
 
         </ul>
 
     </div>
 
+
 </div>
 
+
+
+<!-- =========================
+     SCRIPTS
+========================= -->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
