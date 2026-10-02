@@ -26,10 +26,16 @@
             object-fit: cover;
         }
 
+        .icons a {
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 28px;
+        }
+
         .right {
             margin-left: 280px;
             padding: 50px;
-            max-width: 800px;
+            max-width: 850px;
         }
 
         h1 {
@@ -44,18 +50,19 @@
             margin-bottom: 5px;
         }
 
-        a {
-            color: #333;
-        }
-
         li {
-            margin-bottom: 8px;
+            margin-bottom: 7px;
         }
     </style>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
+    <!-- LEFT SIDE -->
     <div class="left">
 
         <img src="images/Priya.jpeg" alt="Vamsi Priya Sakhamuri">
@@ -64,15 +71,28 @@
 
         <p>Data Scientist</p>
 
-        <p>
-            <a href="mailto:vamsipriyasakhamuri0@example.com">Email</a><br>
-            <a href="https://www.linkedin.com/in/vamsi-priya-sakhamuri/">LinkedIn</a><br>
-            <a href="https://github.com/vsakh002">GitHub</a>
-        </p>
+        <div class="icons">
+
+            <a href="mailto:vamsipriyasakhamuri0@example.com" title="Email">
+                📧
+            </a>
+
+            <a href="https://www.linkedin.com/in/vamsi-priya-sakhamuri/"
+               target="_blank" title="LinkedIn">
+                💼
+            </a>
+
+            <a href="https://github.com/vsakh002"
+               target="_blank" title="GitHub">
+                💻
+            </a>
+
+        </div>
 
     </div>
 
 
+    <!-- RIGHT SIDE -->
     <div class="right">
 
         <h2>Technical Skills</h2>
@@ -131,7 +151,7 @@
         <h3>Energy Optimization using Deep Reinforcement Learning</h3>
 
         <ul>
-            <li>Applied deep reinforcement learning techniques to building energy optimization.</li>
+            <li>Applied deep reinforcement learning to building energy optimization.</li>
             <li>Analyzed energy consumption patterns and optimization strategies.</li>
         </ul>
 
@@ -139,8 +159,8 @@
         <h3>Recommender System</h3>
 
         <ul>
-            <li>Developed a recommendation system using machine learning techniques.</li>
-            <li>Worked with data preprocessing, modeling, and evaluation.</li>
+            <li>Developed a recommendation system using machine learning.</li>
+            <li>Performed data preprocessing, modeling, and evaluation.</li>
         </ul>
 
 
@@ -159,7 +179,6 @@
         <h2>Contact</h2>
 
         <p>
-            Email:
             <a href="mailto:vamsipriyasakhamuri0@example.com">
                 vamsipriyasakhamuri0@example.com
             </a>
