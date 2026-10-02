@@ -1,1247 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Vamsi Priya Sakhamuri | Data Scientist</title>
-
+    <title>Vamsi Priya Sakhamuri</title>
 
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-        * {
+        .left {
+            position: fixed;
+            width: 280px;
+            height: 100vh;
+            text-align: center;
+            padding: 40px 20px;
             box-sizing: border-box;
         }
 
-
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #333;
-            background: #ffffff;
-            line-height: 1.6;
-        }
-
-
-        /* =========================================
-           LEFT SIDEBAR
-           ========================================= */
-
-        .sidebar {
-
-            position: fixed;
-
-            left: 0;
-            top: 0;
-
-            width: 300px;
-            height: 100vh;
-
-            background: #f7f7f7;
-
-            display: flex;
-            flex-direction: column;
-
-            align-items: center;
-
-            text-align: center;
-
-            padding: 50px 30px;
-
-            overflow-y: auto;
-
-            border-right: 1px solid #e5e5e5;
-        }
-
-
-        /* Profile image */
-
-        .profile-image {
-
-            width: 170px;
-            height: 170px;
-
-            object-fit: cover;
-
+        .left img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-
-            margin-bottom: 25px;
+            object-fit: cover;
         }
 
-
-        .sidebar h1 {
-
-            font-size: 26px;
-
-            margin: 0 0 8px 0;
-
-            color: #222;
-
-            font-weight: 600;
+        .right {
+            margin-left: 280px;
+            padding: 50px;
+            max-width: 800px;
         }
 
-
-        .sidebar .role {
-
-            font-size: 18px;
-
-            color: #666;
-
-            margin-bottom: 25px;
+        h1 {
+            margin-bottom: 5px;
         }
 
-
-        /* Contact information */
-
-        .contact {
-
-            width: 100%;
-
-            margin-top: 10px;
+        h2 {
+            margin-top: 45px;
         }
 
-
-        .contact a {
-
-            display: block;
-
-            color: #2676b9;
-
-            text-decoration: none;
-
-            margin: 12px 0;
-
-            font-size: 15px;
+        a {
+            color: #333;
         }
-
-
-        .contact a:hover {
-
-            text-decoration: underline;
-        }
-
-
-        .sidebar-divider {
-
-            width: 80%;
-
-            border: 0;
-
-            border-top: 1px solid #ddd;
-
-            margin: 25px 0;
-        }
-
-
-        .sidebar-description {
-
-            font-size: 14px;
-
-            color: #666;
-
-            text-align: center;
-        }
-
-
-
-        /* =========================================
-           MAIN CONTENT
-           ========================================= */
-
-        .main {
-
-            margin-left: 300px;
-
-            height: 100vh;
-
-            overflow-y: auto;
-
-            padding: 60px 70px;
-        }
-
-
-        .content {
-
-            max-width: 900px;
-
-            margin: 0 auto;
-        }
-
-
-        /* =========================================
-           HEADER
-           ========================================= */
-
-        .main-header {
-
-            margin-bottom: 50px;
-        }
-
-
-        .main-header h2 {
-
-            font-size: 38px;
-
-            color: #222;
-
-            margin: 0 0 5px 0;
-
-            font-weight: 600;
-        }
-
-
-        .main-header .subtitle {
-
-            font-size: 22px;
-
-            color: #666;
-
-            margin: 0;
-        }
-
-
-        /* =========================================
-           SECTIONS
-           ========================================= */
-
-        section {
-
-            margin-bottom: 50px;
-        }
-
-
-        section h2 {
-
-            font-size: 27px;
-
-            color: #222;
-
-            border-bottom: 1px solid #ddd;
-
-            padding-bottom: 8px;
-
-            margin-bottom: 25px;
-        }
-
-
-        section h3 {
-
-            font-size: 20px;
-
-            color: #222;
-
-            margin-bottom: 3px;
-        }
-
-
-        section h4 {
-
-            font-size: 16px;
-
-            color: #666;
-
-            font-weight: normal;
-
-            margin-top: 0;
-
-            margin-bottom: 15px;
-        }
-
-
-        p {
-
-            font-size: 16px;
-
-            margin: 10px 0 15px;
-        }
-
-
-        ul {
-
-            padding-left: 25px;
-        }
-
-
-        li {
-
-            margin-bottom: 9px;
-
-            font-size: 16px;
-        }
-
-
-        /* =========================================
-           EXPERIENCE
-           ========================================= */
-
-        .experience {
-
-            margin-bottom: 35px;
-        }
-
-
-        .experience h3 {
-
-            margin-bottom: 4px;
-        }
-
-
-        .experience h4 {
-
-            margin-bottom: 15px;
-        }
-
-
-
-        /* =========================================
-           PROJECTS
-           ========================================= */
-
-        .project {
-
-            margin-bottom: 40px;
-        }
-
-
-        .project-title {
-
-            font-size: 21px;
-
-            font-weight: bold;
-
-            color: #222;
-
-            margin-bottom: 8px;
-        }
-
-
-        .project-links a {
-
-            color: #2676b9;
-
-            text-decoration: none;
-
-            margin-right: 18px;
-        }
-
-
-        .project-links a:hover {
-
-            text-decoration: underline;
-        }
-
-
-        /* =========================================
-           SKILLS
-           ========================================= */
-
-        .skill-line {
-
-            margin-bottom: 12px;
-        }
-
-
-        .skill-line strong {
-
-            color: #222;
-        }
-
-
-
-        /* =========================================
-           FOOTER
-           ========================================= */
-
-        footer {
-
-            border-top: 1px solid #ddd;
-
-            padding-top: 25px;
-
-            margin-top: 60px;
-
-            text-align: center;
-
-            color: #777;
-
-            font-size: 14px;
-        }
-
-
-
-        /* =========================================
-           MOBILE
-           ========================================= */
-
-        @media (max-width: 800px) {
-
-            .sidebar {
-
-                position: relative;
-
-                width: 100%;
-
-                height: auto;
-
-                border-right: none;
-
-                border-bottom: 1px solid #ddd;
-
-                padding: 35px 20px;
-            }
-
-
-            .main {
-
-                margin-left: 0;
-
-                height: auto;
-
-                overflow-y: visible;
-
-                padding: 40px 25px;
-            }
-
-
-            .profile-image {
-
-                width: 140px;
-
-                height: 140px;
-            }
-
-
-            .main-header h2 {
-
-                font-size: 30px;
-            }
-
-        }
-
     </style>
-
 </head>
-
-
 
 <body>
 
+    <div class="left">
+        <img src="images/Vamsi.jpg" alt="Vamsi Priya Sakhamuri">
 
-<!-- =====================================================
-     LEFT SIDEBAR
-     ===================================================== -->
+        <h1>Vamsi Priya Sakhamuri</h1>
 
-<aside class="sidebar">
+        <p>Data Scientist</p>
 
-
-    <!-- YOUR PHOTO -->
-
-    <img
-        class="profile-image"
-        src="images/Vamsi.jpg"
-        alt="Vamsi Priya Sakhamuri"
-    >
-
-
-    <!-- YOUR NAME -->
-
-    <h1>
-        Vamsi Priya Sakhamuri
-    </h1>
-
-
-    <!-- YOUR TITLE -->
-
-    <div class="role">
-        Data Scientist
+        <p>
+            <a href="mailto:YOUR_EMAIL@example.com">Email</a><br>
+            <a href="https://www.linkedin.com/in/vamsi-priya-sakhamuri/">LinkedIn</a><br>
+            <a href="https://github.com/vsakh002">GitHub</a>
+        </p>
     </div>
 
+    <div class="right">
 
-    <hr class="sidebar-divider">
+        <h2>About Me</h2>
+        <p>
+            Master's in Computer Science with experience in data analysis,
+            databases, systems analysis, and higher education technology.
+            Interested in Data Science, AI, Machine Learning, and research.
+        </p>
 
+        <h2>Technical Skills</h2>
+        <p>
+            Python · SQL · SQL Server · Power BI · Tableau · AWS ·
+            Databricks · Spark · PySpark · Informatica · Git · Docker ·
+            Machine Learning
+        </p>
 
-    <!-- CONTACT DETAILS -->
+        <h2>Education</h2>
+        <p>
+            <b>Old Dominion University</b><br>
+            M.S. Computer Science · 2025
+        </p>
 
-    <div class="contact">
+        <p>
+            <b>Bachelor's in Computer Science</b>
+        </p>
 
-        <a
-            href="mailto:YOUR_EMAIL@example.com">
-            Email
-        </a>
+        <h2>Work Experience</h2>
 
+        <h3>Systems Analyst — Old Dominion University</h3>
+        <p>
+            Support academic systems, instructional data, enterprise
+            applications, data validation, troubleshooting, and reporting.
+        </p>
 
-        <a
-            href="https://www.linkedin.com/in/vamsi-priya-sakhamuri/"
-            target="_blank">
-            LinkedIn
-        </a>
+        <h3>Database Administrator — Old Dominion University</h3>
+        <p>
+            Worked with SQL databases, ETL processes, institutional data,
+            dashboards, and data quality.
+        </p>
 
+        <h2>Projects</h2>
 
-        <a
-            href="https://github.com/vsakh002"
-            target="_blank">
-            GitHub
-        </a>
+        <h3>Energy Optimization using Deep Reinforcement Learning</h3>
+        <p>
+            Applied deep reinforcement learning techniques to optimize
+            building energy consumption.
+        </p>
 
+        <h3>Recommender System</h3>
+        <p>
+            Developed a recommendation system using machine learning
+            techniques.
+        </p>
 
-        <a
-            href="resume.pdf"
-            target="_blank">
-            Resume
-        </a>
+        <h2>Research Interests</h2>
+        <p>
+            Data Science · Artificial Intelligence · Machine Learning ·
+            Deep Learning · Data Mining · AI for Systems
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+            Email: <a href="mailto:YOUR_EMAIL@example.com">
+            YOUR_EMAIL@example.com</a>
+        </p>
 
     </div>
-
-
-    <hr class="sidebar-divider">
-
-
-    <div class="sidebar-description">
-
-        Data Science · Machine Learning ·
-        Artificial Intelligence · Data Analytics
-
-    </div>
-
-
-</aside>
-
-
-
-<!-- =====================================================
-     MAIN SCROLLING CONTENT
-     ===================================================== -->
-
-<main class="main">
-
-
-<div class="content">
-
-
-    <!-- ================================================
-         HEADER
-         ================================================ -->
-
-    <header class="main-header">
-
-        <h2>
-            Vamsi Priya Sakhamuri
-        </h2>
-
-        <p class="subtitle">
-            Data Scientist
-        </p>
-
-    </header>
-
-
-
-    <!-- ================================================
-         ABOUT
-         ================================================ -->
-
-    <section>
-
-        <h2>
-            About Me
-        </h2>
-
-
-        <p>
-
-            I am a Computer Science professional with a
-            Master's degree in Computer Science from Old
-            Dominion University and experience in data
-            analytics, database systems, higher education
-            technology, and enterprise applications.
-
-        </p>
-
-
-        <p>
-
-            My interests include Data Science, Machine
-            Learning, Artificial Intelligence, data
-            engineering, and analytical systems. I enjoy
-            working with data to identify patterns, develop
-            analytical solutions, and support data-driven
-            decision making.
-
-        </p>
-
-    </section>
-
-
-
-    <!-- ================================================
-         TECHNICAL SKILLS
-         ================================================ -->
-
-    <section>
-
-        <h2>
-            Technical Skills
-        </h2>
-
-
-        <p class="skill-line">
-
-            <strong>Programming:</strong>
-
-            Python, SQL, T-SQL
-
-        </p>
-
-
-        <p class="skill-line">
-
-            <strong>Data Science & Machine Learning:</strong>
-
-            Machine Learning, Deep Learning,
-            Deep Reinforcement Learning,
-            Predictive Modeling, Data Analysis
-
-        </p>
-
-
-        <p class="skill-line">
-
-            <strong>Data Engineering:</strong>
-
-            ETL/ELT, Informatica, Databricks,
-            Apache Spark, PySpark,
-            Data Validation, Data Quality
-
-        </p>
-
-
-        <p class="skill-line">
-
-            <strong>Databases:</strong>
-
-            SQL Server, MySQL, SQLite,
-            Relational Databases
-
-        </p>
-
-
-        <p class="skill-line">
-
-            <strong>Cloud & APIs:</strong>
-
-            AWS, REST APIs, Docker
-
-        </p>
-
-
-        <p class="skill-line">
-
-            <strong>Data Visualization:</strong>
-
-            Power BI, Tableau
-
-        </p>
-
-
-        <p class="skill-line">
-
-            <strong>Tools:</strong>
-
-            Git, GitHub, Jupyter Notebook
-
-        </p>
-
-    </section>
-
-
-
-    <!-- ================================================
-         EDUCATION
-         ================================================ -->
-
-    <section>
-
-        <h2>
-            Education
-        </h2>
-
-
-        <h3>
-            M.S., Computer Science
-        </h3>
-
-        <h4>
-            Old Dominion University
-            <em>(December 2025)</em>
-        </h4>
-
-        <p>
-            GPA: 3.7
-        </p>
-
-
-        <h3>
-            B.S., Computer Science
-        </h3>
-
-        <h4>
-            Computer Science
-        </h4>
-
-        <p>
-            GPA: 3.7
-        </p>
-
-    </section>
-
-
-
-    <!-- ================================================
-         WORK EXPERIENCE
-         ================================================ -->
-
-    <section>
-
-        <h2>
-            Work Experience
-        </h2>
-
-
-        <!-- SYSTEMS ANALYST -->
-
-        <div class="experience">
-
-            <h3>
-                Systems Analyst @ Old Dominion University
-            </h3>
-
-            <h4>
-                <em>May 2025 – Present</em>
-            </h4>
-
-
-            <ul>
-
-                <li>
-                    Analyze academic, course, and
-                    instructional data to support university
-                    operations and data-driven decision making.
-                </li>
-
-
-                <li>
-                    Support academic scheduling and
-                    instructional data workflows across
-                    enterprise systems.
-                </li>
-
-
-                <li>
-                    Work with technical and business
-                    stakeholders to gather requirements and
-                    document technical solutions.
-                </li>
-
-
-                <li>
-                    Perform data reconciliation, validation,
-                    troubleshooting, and root-cause analysis.
-                </li>
-
-
-                <li>
-                    Support digital learning technologies
-                    and instructional content workflows.
-                </li>
-
-            </ul>
-
-        </div>
-
-
-
-        <!-- DATABASE ADMINISTRATOR -->
-
-        <div class="experience">
-
-            <h3>
-                Database Administrator @ Old Dominion University
-            </h3>
-
-            <h4>
-                <em>September 2023 – May 2025</em>
-            </h4>
-
-
-            <ul>
-
-                <li>
-                    Developed SQL and Python processes for
-                    data preparation, transformation, and
-                    analysis.
-                </li>
-
-
-                <li>
-                    Supported institutional dashboards and
-                    analytical reporting.
-                </li>
-
-
-                <li>
-                    Performed data validation and
-                    reconciliation across database systems.
-                </li>
-
-
-                <li>
-                    Supported ETL workflows and
-                    synchronization of institutional data.
-                </li>
-
-
-                <li>
-                    Assisted with predictive modeling and
-                    machine learning projects.
-                </li>
-
-            </ul>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================================================
-         PROJECTS
-         ================================================ -->
-
-    <section>
-
-        <h2>
-            Projects
-        </h2>
-
-
-        <!-- PROJECT 1 -->
-
-        <div class="project">
-
-            <div class="project-title">
-
-                Energy Optimization Using
-                Deep Reinforcement Learning
-
-            </div>
-
-
-            <p>
-
-                Developed a deep reinforcement learning
-                approach for energy optimization. The project
-                involved data preparation, model development,
-                experimentation, and evaluation of
-                reinforcement learning performance.
-
-            </p>
-
-
-            <p>
-
-                <strong>Technologies:</strong>
-
-                Python, Machine Learning,
-                Deep Reinforcement Learning
-
-            </p>
-
-
-            <div class="project-links">
-
-                <a href="#" target="_blank">
-                    GitHub
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- PROJECT 2 -->
-
-        <div class="project">
-
-            <div class="project-title">
-
-                Recommender System
-
-            </div>
-
-
-            <p>
-
-                Developed a machine learning-based
-                recommender system to analyze user and item
-                characteristics and generate personalized
-                recommendations.
-
-            </p>
-
-
-            <p>
-
-                <strong>Technologies:</strong>
-
-                Python, Machine Learning,
-                Data Analysis
-
-            </p>
-
-
-            <div class="project-links">
-
-                <a href="#" target="_blank">
-                    GitHub
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- PROJECT 3 -->
-
-        <div class="project">
-
-            <div class="project-title">
-
-                Airbnb Data Analysis & Visualization
-
-            </div>
-
-
-            <p>
-
-                Analyzed Airbnb data to identify trends and
-                patterns and developed interactive
-                visualizations to communicate analytical
-                findings.
-
-            </p>
-
-
-            <p>
-
-                <strong>Technologies:</strong>
-
-                Tableau, Data Analysis,
-                Data Visualization
-
-            </p>
-
-
-            <div class="project-links">
-
-                <a href="#" target="_blank">
-                    Dashboard
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- PROJECT 4 -->
-
-        <div class="project">
-
-            <div class="project-title">
-
-                Ellucian Experience –
-                Student Holds Application
-
-            </div>
-
-
-            <p>
-
-                Developed a student-facing application that
-                retrieves student information and active holds
-                using enterprise APIs and serverless workflows.
-
-            </p>
-
-
-            <p>
-
-                <strong>Technologies:</strong>
-
-                React, REST APIs,
-                AWS Lambda, Ellucian Ethos
-
-            </p>
-
-        </div>
-
-
-
-        <!-- PROJECT 5 -->
-
-        <div class="project">
-
-            <div class="project-title">
-
-                California Housing Index Analysis
-
-            </div>
-
-
-            <p>
-
-                Performed data analysis and visualization on
-                California housing data to explore trends,
-                relationships, and factors affecting housing
-                indicators.
-
-            </p>
-
-
-            <p>
-
-                <strong>Technologies:</strong>
-
-                Python, Data Analysis,
-                Data Visualization
-
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================================================
-         RESEARCH INTERESTS
-         ================================================ -->
-
-    <section>
-
-        <h2>
-            Research Interests
-        </h2>
-
-
-        <ul>
-
-            <li>
-                Artificial Intelligence and Machine Learning
-            </li>
-
-            <li>
-                Data Science and Statistical Learning
-            </li>
-
-            <li>
-                Deep Reinforcement Learning
-            </li>
-
-            <li>
-                Data Analytics and Data Engineering
-            </li>
-
-            <li>
-                AI for Education
-            </li>
-
-            <li>
-                Learning Analytics
-            </li>
-
-        </ul>
-
-    </section>
-
-
-
-    <!-- ================================================
-         ACADEMIC & RESEARCH WORK
-         ================================================ -->
-
-    <section>
-
-        <h2>
-            Academic & Research Work
-        </h2>
-
-
-        <p>
-
-            My academic work includes machine learning,
-            data analytics, database systems, and artificial
-            intelligence projects.
-
-        </p>
-
-
-        <p>
-
-            My research interests focus on applying
-            computational and statistical approaches to
-            real-world problems involving complex data,
-            machine learning, and artificial intelligence.
-
-        </p>
-
-    </section>
-
-
-
-    <!-- ================================================
-         LEADERSHIP
-         ================================================ -->
-
-    <section>
-
-        <h2>
-            Leadership & Activities
-        </h2>
-
-
-        <ul>
-
-            <li>
-                Led a Coding Club for two years, supporting
-                programming activities and student engagement.
-            </li>
-
-
-            <li>
-                Participated in academic and technical
-                projects involving machine learning, data
-                analytics, databases, and cloud technologies.
-            </li>
-
-        </ul>
-
-    </section>
-
-
-
-    <!-- ================================================
-         PUBLICATIONS
-         ================================================ -->
-
-    <section>
-
-        <h2>
-            Publications
-        </h2>
-
-
-        <p>
-
-            Publications and research work will be added
-            here as applicable.
-
-        </p>
-
-    </section>
-
-
-
-    <!-- ================================================
-         RESUME
-         ================================================ -->
-
-    <section>
-
-        <h2>
-            Resume
-        </h2>
-
-
-        <p>
-
-            <a href="resume.pdf" target="_blank">
-                View My Resume
-            </a>
-
-        </p>
-
-    </section>
-
-
-
-    <!-- ================================================
-         CONTACT
-         ================================================ -->
-
-    <section>
-
-        <h2>
-            Connect With Me
-        </h2>
-
-
-        <p>
-
-            <a
-                href="https://github.com/vsakh002"
-                target="_blank">
-
-                GitHub
-
-            </a>
-
-        </p>
-
-
-        <p>
-
-            <a
-                href="https://www.linkedin.com/in/vamsi-priya-sakhamuri/"
-                target="_blank">
-
-                LinkedIn
-
-            </a>
-
-        </p>
-
-    </section>
-
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        © Vamsi Priya Sakhamuri
-
-    </footer>
-
-
-</div>
-
-</main>
-
 
 </body>
-
 </html>
